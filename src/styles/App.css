@@ -1,0 +1,13 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+:root {
+  --bg-color: rgb(197, 197, 197);
+  --primary-color: blue;
+}
+body {
+  background-color: var(--bg-color);
+}

@@ -1,0 +1,41 @@
+:root {
+    --form-bg-color: white;
+}
+form {
+    max-width: 80vw;
+    padding: 16px;
+
+    border: 1px solid var(--form-bg-color);
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    
+    gap: 8px;
+
+    background-color: var(--form-bg-color);
+    color: var(--primary-color);
+    box-shadow: 2px 2px 7px var(--primary-color);
+}
+input {
+    padding: 4px;
+    border: 1px solid black;
+    border-radius: 2px;
+}
+input:hover, input:focus {
+    outline-color: var(--primary-color);
+}
+#btn-login {
+    padding: 4px 8px;
+    width: 100%;
+    
+    background-color: var(--primary-color);
+    color: var(--form-bg-color);
+
+    border: 1px solid var(--primary-color);
+    border-radius: 4px;
+}

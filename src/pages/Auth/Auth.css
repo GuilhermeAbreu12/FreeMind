@@ -1,0 +1,24 @@
+#form-section {
+    max-width: 80vw;
+    padding: 16px;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    justify-self: center;
+    gap: 8px;
+    box-shadow: 0 0 4px white;
+}
+input {
+    padding: 4px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+}
+input:hover, input:focus {
+}
+#btn-login {
+    padding: 5px 8px;
+    width: 100%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background-color: darkblue;
+    color: var(--form-bg-color);

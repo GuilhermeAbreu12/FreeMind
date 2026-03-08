@@ -1,12 +1,15 @@
-import { useState } from 'react'
-import './styles/App.css'
+import { Routes, Route } from 'react-router-dom'
 
-import Login from './pages/Login/Login'
+import Auth_Screen from './pages/Auth/AuthScreen'
+
+import './styles/App.css'
 
 function App() {
   return (
     <>
-    <Login/>
+    <Routes>
+      <Route path='/*' element={<Auth_Screen />} />
+    </Routes>
     </>
   )
 }

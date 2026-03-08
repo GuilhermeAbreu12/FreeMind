@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: var(--primary-font);
 }
 :root {
   --bg-color: rgb(197, 197, 197);
   --primary-color: blue;
+  --primary-font: 'Montserrat';
+  --second-font: 'Bebas Neue';
+  --font03: 'Antonio';
 }
 body {
   background-color: var(--bg-color);

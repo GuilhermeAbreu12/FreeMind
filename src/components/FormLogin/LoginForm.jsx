@@ -6,6 +6,7 @@ function FormLogin(){
         <form onSubmit={handleSubmit}>
             <EmailInput/>
             <PasswordInput/>
+            <button id='btn-login' type='submit'>Login</button>
         </form>
     </>)
 }

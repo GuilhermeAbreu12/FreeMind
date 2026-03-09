@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 
-import Auth_Screen from './pages/Auth/AuthScreen'
+import AuthScreen from './pages/Auth/AuthScreen'
+import HomeScreen from './pages/Home/HomeScreen'
 
 import './styles/App.css'
 
@@ -8,7 +9,8 @@ function App() {
   return (
     <>
     <Routes>
-      <Route path='/*' element={<Auth_Screen />} />
+      <Route path='/*' element={<AuthScreen />} />
+      <Route path='/home' element={<HomeScreen />} />
     </Routes>
     </>
   )

@@ -12,7 +12,8 @@ import './Auth.css'
 function Auth_Screen(){
     const location = useLocation()
 
-    const isLoginPage = location.pathname === '/login' 
+    let isLoginPage = location.pathname === '/login'
+    if (!isLoginPage) isLoginPage = location.pathname === '/' 
 
     return (<>
         <Nav/>

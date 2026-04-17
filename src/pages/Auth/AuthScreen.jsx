@@ -8,12 +8,23 @@ import LoginForm from "../../components/FormLogin/LoginForm"
 import SignUpForm from '../../components/FormSignUp/SignUpForm'
 // Importando o CSS
 import './Auth.css'
+import { useEffect } from 'react'
 
 function Auth_Screen(){
     const location = useLocation()
 
     let isLoginPage = location.pathname === '/login'
     if (!isLoginPage) isLoginPage = location.pathname === '/' 
+    
+    useEffect(() => {
+        document.body.classList.add('auth');
+        const nav = document.querySelector('#nav-container');
+        nav.classList.add('auth')
+        return () => {
+            document.body.classList.remove('auth');
+            nav.classList.remove('auth')
+        };
+    }, []);
 
     return (<>
         <Nav/>

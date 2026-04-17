@@ -1,7 +1,7 @@
-function Home(){
-    return (
-        <>
-        </>
-    )
+function HomeScreen(){
+  return (
+  <>
+  </>
+  )
 }
-export default Home
+export default HomeScreen

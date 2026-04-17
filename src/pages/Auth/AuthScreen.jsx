@@ -3,7 +3,7 @@ import { Routes, Route, useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
 
 // Importando componentes
-import Nav from '../../components/nav/Nav'
+import Nav from '../../components/Logo/Logo'
 import LoginForm from "../../components/FormLogin/LoginForm"
 import SignUpForm from '../../components/FormSignUp/SignUpForm'
 // Importando o CSS

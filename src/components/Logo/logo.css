@@ -1,0 +1,18 @@
+#nav-container {
+    position: absolute;
+    width: 162.4px; /*Aproximadamente o mesmo tamanho do resto da nav*/
+    left: 8px;
+    border: 1px solid transparent;
+    box-shadow: 1px 1px 5px gainsboro;
+    display: inline-flex;
+    gap: 8px;
+    text-align: center;
+    justify-content: center;
+/*    background: linear-gradient(to right, rgb(0, 0, 121), rgb(0, 0, 71), rgb(0, 0, 54));*/
+}
+img {
+    height: 20px;
+}
+p {
+    color: white;
+}

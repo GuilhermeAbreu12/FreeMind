@@ -1,18 +1,4 @@
-#nav-container {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    padding: 4px 8px;
-    border: 1px solid transparent;
-    box-shadow: 1px 1px 5px gainsboro;
-    border-radius: 16px 0 16px 0;
-    display: inline-flex;
-    gap: 8px;
-    background: linear-gradient(to right, rgb(0, 0, 121), rgb(0, 0, 71), rgb(0, 0, 54));
 }
-img {
-    height: 20px;
 }
-p {
     color: white;
 }

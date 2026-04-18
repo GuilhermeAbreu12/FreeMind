@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import Nav from '../../components/Nav/Nav'
 import './HomeScreen.css'
 
 function HomeScreen(){
@@ -11,6 +12,7 @@ function HomeScreen(){
   
   return (
   <>
+    <Nav />
   </>
   )
 }

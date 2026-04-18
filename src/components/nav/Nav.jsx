@@ -1,4 +1,25 @@
+import './Nav.css';
+import Logo from '../Logo/Logo'
+import IconeMenu from '../../assets/images/logos/sun.png'
+import { useEffect, useState } from 'react';
 function Nav(){
+    const [MenuState, SetMenuState] = useState(false);
+    
+    const ul = document.querySelector('#nav-body-ul')
+    const li = document.createElement('li')
+   
+    const navMenu = document.querySelector('nav.menu')
+    const menuIcon = document.querySelector('#menu-icon')
+    if (MenuState) {
+        navMenu.classList.add('active');
+        menuIcon.classList.add('active')
+    } 
+    else 
+        if (navMenu && navMenu.classList.contains('active')){
+            navMenu.classList.remove('active');
+            menuIcon.classList.remove('active')
+    } 
+
     return (
         <>
         <aside id='aside-menu'>

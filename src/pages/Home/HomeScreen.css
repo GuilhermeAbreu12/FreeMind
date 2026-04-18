@@ -1,0 +1,7 @@
+body.home {
+    background-image: none;
+    display: flex;
+    min-width: 100dvw;
+    flex-direction: row;
+    background-color: #F6FAFF !important;
+}

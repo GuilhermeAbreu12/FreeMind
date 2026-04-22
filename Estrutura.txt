@@ -1,0 +1,11 @@
+components           = componentes reutilizáveis em todo o código
+components |- ui     = componentes reutilizáveis
+components |- layout = elementos que abrangem outros: nav, form etc
+
+features                                 = cada parte isolada que é específica
+features |- {nome da tela}               = features daquela tela
+features |- {nome da tela} |- components = componentes que só servem para aquela tela
+features |- {nome da tela} |- pages      = tela em si
+features |- {nome da tela} |- styles     = estilos da tela e seus componentes específicos
+
+styles = estilos globais para todas as telas

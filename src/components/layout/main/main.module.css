@@ -1,0 +1,27 @@
+/* Estilo do main */
+.main {
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* Fim do estilo do main */
+
+/* Primary button */
+.primaryBtn {
+    padding: .5rem;
+    border: 1px solid var(--btn-primary);
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    background-color: var(--btn-primary);
+}
+.primaryBtn:hover {
+    transition: .7s;
+    background-color: darkblue;
+    border-color: darkblue;
+    box-shadow: 0 0 10px darkblue;
+}
+/* end primary button */

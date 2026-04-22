@@ -1,0 +1,10 @@
+.authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.authForm input {
+    display: flex;
+    flex-direction: column;
+    font-size: .9rem;
+}

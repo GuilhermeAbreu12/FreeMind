@@ -9,6 +9,8 @@ import SignUpForm from '../../components/sign-up-form'
 import useBodyClass from '../../../../hooks/useBodyClass'
 
 // Importando o CSS
+import styles from './auth-screen.module.css'
+import logoStyles from '../../../../components/layout/logo/logo.module.css'
 import { useEffect } from 'react'
 
 function Auth_Screen(){
@@ -29,8 +31,13 @@ function Auth_Screen(){
     }, []); */}
 
     return (<>
+        <Logo className={logoStyles.auth}/>
+        <section className={styles.formSection}>
+            <div className={styles.leftSide}>
                 <p>Bem-vindo de volta.</p>
+                <h2 className={styles.authName}>{isLoginPage ? 'Entrar' : 'Criar conta'}</h2>
             </div>
+            <div className={styles.rightSide}>
                 <Routes>
                     <Route index element={<LoginForm />} />
                     <Route path='login' element={<LoginForm />} />

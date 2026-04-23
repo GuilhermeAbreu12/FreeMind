@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'
 
-import AuthScreen from './pages/Auth/AuthScreen'
-import HomeScreen from './pages/Home/HomeScreen'
+import AuthScreen from './features/auth/pages/auth-screen/auth-screen'
+import HomeScreen from './features/home/pages/HomeScreen/home-screen'
 
 import './styles/App.css'
 

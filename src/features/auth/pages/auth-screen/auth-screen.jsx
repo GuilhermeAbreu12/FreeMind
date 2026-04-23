@@ -6,6 +6,7 @@ import { useLocation } from 'react-router-dom'
 import Logo from '../../../../components/layout/logo/logo'
 import LoginForm from "../../components/login-form"
 import SignUpForm from '../../components/sign-up-form'
+import useBodyClass from '../../../../hooks/useBodyClass'
 
 // Importando o CSS
 import { useEffect } from 'react'
@@ -16,6 +17,7 @@ function Auth_Screen(){
     let isLoginPage = location.pathname === '/login'
     if (!isLoginPage) isLoginPage = location.pathname === '/' 
 
+    useBodyClass('auth')
 
     {/*
     useEffect(() => {   

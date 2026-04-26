@@ -22,7 +22,7 @@
     flex-direction: column;
 }
 .leftSide .authName {
-    font-family: var(--second-font);    
+    font-family: var(--secondary-font);    
     font-size: 3rem;
     letter-spacing: 4px;
     text-align: center;

@@ -1,0 +1,17 @@
+#header {
+    height: min-content;
+    width: 100%;
+    padding: 1rem;
+    gap: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    border-bottom: 1px solid black;
+    color: black;
+}
+#username {
+    font-weight: 500;
+}
+.icons {
+    height: 25px;
+}

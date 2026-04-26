@@ -4,6 +4,7 @@ import Main from '../../../../components/layout/main/main'
 import NextProject from '../../components/next-project/next-project'
 import MonthlySummary from '../../components/monthly-summary/monthly-summary'
 import Header from '../../../../components/layout/header/header'
+import Button from '../../../../components/ui/button/button'
 import useBodyClass from '../../../../hooks/useBodyClass'
 import homeStyles from './home-screen.module.css'
 
@@ -13,6 +14,7 @@ function HomeScreen(){
   <>
     <Header />
     <Sidebar />
+        <Button className={mainStyles.primaryBtn}>Criar novo projeto</Button>
         <NextProject />
       <MonthlySummary />
   </>

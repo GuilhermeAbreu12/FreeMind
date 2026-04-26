@@ -5,11 +5,9 @@ import useBodyClass from '../../../../hooks/useBodyClass'
 import homeStyles from './home-screen.module.css'
 
 function HomeScreen(){
-  useBodyClass(homeStyles.home)
   return (
   <>
     <Sidebar />
-    <Main />
   </>
   )
 }

@@ -3,6 +3,7 @@
     width: min-content;
     padding-right: 1rem;
     display: flex;
+    position: absolute;
 }
 .menu.active {
     display: block;

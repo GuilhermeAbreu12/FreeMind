@@ -3,6 +3,7 @@ import Sidebar from '../../../../components/layout/sidebar/sidebar'
 import Main from '../../../../components/layout/main/main'
 import NextProject from '../../components/next-project/next-project'
 import MonthlySummary from '../../components/monthly-summary/monthly-summary'
+import Header from '../../../../components/layout/header/header'
 import useBodyClass from '../../../../hooks/useBodyClass'
 import homeStyles from './home-screen.module.css'
 
@@ -10,6 +11,7 @@ function HomeScreen(){
   useBodyClass("home")
   return (
   <>
+    <Header />
     <Sidebar />
         <NextProject />
       <MonthlySummary />

@@ -25,3 +25,8 @@
     border-color: darkblue;
     box-shadow: 0 0 10px darkblue;
 }
+.sectionTitle {
+    margin: 2rem 0 .5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}

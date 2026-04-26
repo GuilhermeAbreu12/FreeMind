@@ -16,6 +16,10 @@
   --secondary-font: 'Bebas Neue';
   --font03: 'Antonio';
 }
+#root {
+  display: contents;
+  height: 100vh;
+}
 body {
   width: 100%;
   display: flex;

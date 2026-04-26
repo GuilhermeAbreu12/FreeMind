@@ -1,0 +1,32 @@
+#aside {
+    display: flex;
+    justify-content: end;
+    align-self: center;
+}
+#table {
+    margin-right: 16px;
+    border-collapse: collapse;
+    text-transform: uppercase;
+}
+#caption {
+    padding: .5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.td {
+    padding: 4px;
+}
+.metricLabel {
+    font-weight: 600;
+    border: 2px solid rgb(211, 211, 211);
+    border-right: 0;
+    color: green;
+}
+.metricValues {
+    text-align: end;
+    border: 2px solid rgb(211, 211, 211);
+    border-left: 0;
+}
+#inProgress {
+    color: darkorange;
+}

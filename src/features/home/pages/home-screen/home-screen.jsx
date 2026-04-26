@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import Sidebar from '../../../../components/layout/sidebar/sidebar'
 import Main from '../../../../components/layout/main/main'
+import mainStyles from '../../../../components/layout/main/main.module.css'
 import NextProject from '../../components/next-project/next-project'
 import MonthlySummary from '../../components/monthly-summary/monthly-summary'
 import Header from '../../../../components/layout/header/header'
@@ -14,9 +15,15 @@ function HomeScreen(){
   <>
     <Header />
     <Sidebar />
+    <Main>
+      <div></div>{/* espaço vazio */}
+      <div className={mainStyles.mainContent}>
         <Button className={mainStyles.primaryBtn}>Criar novo projeto</Button>
+        <h3 className={mainStyles.sectionTitle}>Projeto mais próximo</h3>
         <NextProject />
+      </div>
       <MonthlySummary />
+    </Main>
   </>
   )
 }

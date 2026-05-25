@@ -33,3 +33,8 @@ export const signIn = async (email, password) => {
     return { data, error }
 }
 
+// Logout
+export const logout = async () => {
+    await supabase.auth.signOut()
+}
+

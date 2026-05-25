@@ -21,7 +21,7 @@ function Auth_Screen(){
     const { user } = useContext(authContext) // Espera e recebe autorização do authContext
 
     let isLoginPage = location.pathname === '/login'
-    if (!isLoginPage) isLoginPage = location.pathname === '/' 
+    if (isLoginPage) location.pathname = '/'
 
     useBodyClass('auth')
 

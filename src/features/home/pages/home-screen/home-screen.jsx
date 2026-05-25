@@ -1,11 +1,17 @@
-import { useEffect } from 'react'
+// Importar hooks e elementos
+import useBodyClass from '../../../../hooks/useBodyClass'
+
+// Importar componentes
+import Header from '../../../../components/layout/header/header'
 import Sidebar from '../../../../components/layout/sidebar/sidebar'
 import Main from '../../../../components/layout/main/main'
-import mainStyles from '../../../../components/layout/main/main.module.css'
 import NextProject from '../../components/next-project/next-project'
 import MonthlySummary from '../../components/monthly-summary/monthly-summary'
-import Header from '../../../../components/layout/header/header'
-import useBodyClass from '../../../../hooks/useBodyClass'
+
+// Importar estilos
+import '../../../../styles/App.css'
+import mainStyles from '../../../../components/layout/main/main.module.css'
+import buttonStyles from '../../../../components/ui/button/button.module.css'
 import homeStyles from './home-screen.module.css'
 import { Link } from 'react-router-dom'
 

@@ -38,3 +38,9 @@ export const logout = async () => {
     await supabase.auth.signOut()
 }
 
+// Usuário atual
+export const getUser = async () => {
+    const { data } = await supabase.auth.getUser()
+    return data.user
+}
+

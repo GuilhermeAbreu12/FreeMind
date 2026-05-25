@@ -1,12 +1,11 @@
-import PasswordInput from '../../../components/ui/password-input/password-input'
-import Input from '../../../components/ui/input'
+// Importar componentes personalizados
+import PasswordInput from '../../../components/ui/input/password-input'
+import Input from '../../../components/ui/input/input'
 import Button from '../../../components/ui/button/button'
 import AuthRedirect from './auth-redirect/auth-redirect'
 
-/* CSS */
+/* Importar estilos */
 import styles from '../styles/auth.module.css'
-import inputStyles from '../styles/auth-input.module.css'
-import buttonStyles from '../styles/auth-button.module.css'
 
 function SignUp(){
     const LOGIN_FIRST_TEXT = "Já tem uma conta?"

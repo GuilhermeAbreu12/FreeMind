@@ -1,5 +1,3 @@
-import Input from '../../../components/ui/input'
-import PasswordInput from '../../../components/ui/password-input/password-input'
 // Importar hooks
 import { useEffect, useState } from 'react'
 import { useContext } from 'react'
@@ -8,13 +6,14 @@ import { useContext } from 'react'
 import { getProfile, signIn } from '../../../lib/authService'
 import { authContext } from '../../../contexts/AuthContext'
 
+// Importar componentes
+import Input from '../../../components/ui/input/input'
+import PasswordInput from '../../../components/ui/input/password-input'
 import Button from '../../../components/ui/button/button'
 import AuthRedirect from './auth-redirect/auth-redirect'
 
-/* CSS */
+/* Importar estilos */
 import styles from '../styles/auth.module.css'
-import inputStyles from '../styles/auth-input.module.css'
-import buttonStyles from '../styles/auth-button.module.css'
 
 function FormLogin(){
     const [email, setEmail] = useState('')

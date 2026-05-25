@@ -1,10 +1,12 @@
 import styles from './header.module.css'
 import accountIcon from '../../../assets/images/icons/account.png'
 import bellIcon from '../../../assets/images/icons/bell.png'
+import { useContext, useEffect, useState } from 'react'
+import { authContext } from '../../../contexts/AuthContext'
 import { logout } from '../../../lib/authService'
 
 function Header(){
-    const username = "Programador1234"
+    const { username } = useContext(authContext)
     const [ accountOptionsState, setAccountOptionsState] = useState(false)
 
     const toggleVisibilityAccountOptions = () => {

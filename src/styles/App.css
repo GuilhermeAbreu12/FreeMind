@@ -41,3 +41,6 @@ body.auth {
   background-repeat: no-repeat;
   background-size: cover;
 }
+Link, a {
+  text-decoration: none;
+}

@@ -10,18 +10,20 @@ function MonthlySummary(){
         <aside id={styles.aside}>
             <table id={styles.table}>
                 <caption id={styles.caption}>Neste mês</caption>
-                <tr>
-                    <td className={`${styles.td} ${styles.metricLabel}`} id={styles.inProgress}>Em andamento</td>
-                    <td className={`${styles.td} ${styles.metricValues}`}>{monthlyOnGoingProjects}</td>
-                </tr>
-                <tr>
-                    <td className={`${styles.td} ${styles.metricLabel}`}>Concluídos</td>
-                    <td className={`${styles.td} ${styles.metricValues}`}>{monthlyCompletedProjects}</td>
-                </tr>
-                <tr>
-                    <td className={`${styles.td} ${styles.metricLabel}`}>Faturamento</td>
-                    <td className={`${styles.td} ${styles.metricValues}`}>R$ {monthlyRevenue}</td>
-                </tr>
+                <tbody>
+                    <tr>
+                        <td className={`${styles.td} ${styles.metricLabel}`} id={styles.inProgress} colSpan={2}>Em andamento</td>
+                        <td className={`${styles.td} ${styles.metricValues}`} colSpan={1}>{monthlyOnGoingProjects}</td>
+                    </tr>
+                    <tr>
+                        <td className={`${styles.td} ${styles.metricLabel}`} colSpan={2}>Concluídos</td>
+                        <td className={`${styles.td} ${styles.metricValues}`} colSpan={1}>{monthlyCompletedProjects}</td>
+                    </tr>
+                    <tr>
+                        <td className={`${styles.td} ${styles.metricLabel}`} colSpan={2}>Faturamento</td>
+                        <td className={`${styles.td} ${styles.metricValues}`} colSpan={1}>R$ {monthlyRevenue}</td>
+                    </tr>
+                </tbody>
             </table>
         </aside>
     </>

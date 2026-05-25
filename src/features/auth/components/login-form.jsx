@@ -34,8 +34,10 @@ function FormLogin(){
             ErrorHandling(resultSignIn.error.message)
         }
         e.preventDefault()
-        console.log('Foi enviado')
-    }
+        setIsLoggingIn(true)
+        console.log("sent email:", email)
+        console.log("sent password:", password)
+
         // Tenta fazer login.
         const resultSignIn = await signIn(email, password)
         
@@ -59,10 +61,33 @@ function FormLogin(){
 
     return (<>
         <form onSubmit={handleSubmit} className={styles.authForm}>
-            <Input className={inputStyles.authInput} type="email" name="email" label="E-mail" title="Digite seu E-mail de acesso"/>
-            <PasswordInput className={inputStyles.authInput}/>
+            <Input 
+                className={'authInput'} 
+                type="email" 
+                name="email" 
+                label="E-mail" 
+                autoComplete='email'
+                title="Digite seu E-mail de acesso" 
+                value={email} 
+                onChange={(e) => setEmail(e.target.value)}
+            />
+            <PasswordInput
+                name="password"
+                autoComplete='current-password'
+                className={'authInput'} 
+                value={password} 
+                onChange={(e) => setPassword(e.target.value)}
+            />
             {error && <p style={{ color: 'red' }}>{error}</p>}
             {isLoggingIn && <p>Entrando...</p>}
+            <Button 
+                id='btn-login' 
+                className={'authBtn'} 
+                type="submit"
+                //disabled={isLoggingIn}
+            >
+                Login
+            </Button>
         </form>
         <AuthRedirect id="signup-account" link="/signup" firstText={LOGIN_FIRST_TEXT} secondText={LOGIN_SECOND_TEXT} />
     </>)

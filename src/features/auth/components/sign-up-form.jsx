@@ -21,13 +21,7 @@ function SignUp(){
 
     const LOGIN_FIRST_TEXT = "Já tem uma conta?"
     const LOGIN_SECOND_TEXT = "Entre aqui."
-    return (<>
-        <form className={styles.authForm}>
-            <Input className={inputStyles.authInput} type="text" name="username" label="Nome de usuário" title="Digite seu nome de usuário"/>
-            <Input className={inputStyles.authInput} type="email" name="email" label="E-mail" title="Digite um E-mail de acesso"/>
 
-            <PasswordInput className={inputStyles.authInput}/>
-            <PasswordInput className={inputStyles.authInput} title="Digite sua senha novamente" label='Repita a senha'/>
     const handleSubmit = async (e) => {
         e.preventDefault()
 
@@ -65,6 +59,12 @@ function SignUp(){
         const userID = result.data.user.id 
         createProfile(userID, username)        
     }
+    return (<>
+        <form onSubmit={handleSubmit} className={styles.authForm}>
+            <Input onChange={(e) => setUsername(e.target.value)} className={'authInput'} type="text" name="username" autoComplete='name' label="Nome de usuário" title="Digite seu nome de usuário" value={username}/>
+            <Input onChange={(e) => setEmail(e.target.value)} className={'authInput'} type="email" name="email" label="E-mail" autoComplete='email' title="Digite um E-mail de acesso" value={email}/>
+            <PasswordInput onChange={(e) => setPassword(e.target.value)} className={'authInput'} value={password} autoComplete='new-password' id='enter_password'/>
+            <PasswordInput onChange={(e) => setPasswordConfirm(e.target.value)} className={'authInput'} title="Digite sua senha novamente" label='Repita a senha' value={passwordConfirm} autoComplete='current-password' id='retype_password'/>
             
             <Button id='btn-signup' className={'authBtn'} type="submit" disabled={loading}>
                 {loading ? 'Cadastrando...' : 'Cadastrar'}

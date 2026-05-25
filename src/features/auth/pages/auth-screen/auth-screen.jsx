@@ -21,14 +21,6 @@ function Auth_Screen(){
 
     useBodyClass('auth')
 
-    {/*
-    useEffect(() => {   
-        const logo = document.querySelector('#logo-container');
-        logo.classList.add('auth')
-        return () => {
-            logo.classList.remove('auth')
-        };
-    }, []); */}
 
     return (<>
         <Logo className={logoStyles.auth}/>

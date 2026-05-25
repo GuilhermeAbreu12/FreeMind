@@ -1,6 +1,8 @@
 // Importando funções internas
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import { useLocation } from 'react-router-dom'
+import { authContext } from '../../../../contexts/AuthContext'
+import { useContext } from 'react'
 
 // Importando componentes
 import Logo from '../../../../components/layout/logo/logo'
@@ -15,12 +17,19 @@ import { useEffect } from 'react'
 
 function Auth_Screen(){
     const location = useLocation()
+    const navigate = useNavigate()
+    const { user } = useContext(authContext) // Espera e recebe autorização do authContext
 
     let isLoginPage = location.pathname === '/login'
     if (!isLoginPage) isLoginPage = location.pathname === '/' 
 
     useBodyClass('auth')
 
+    useEffect(()=> {
+        if (user) {
+            navigate('/home')
+        } // Se tiver autorização do authContext, manda para a home
+    }, [user])
 
     return (<>
         <Logo className={logoStyles.auth}/>

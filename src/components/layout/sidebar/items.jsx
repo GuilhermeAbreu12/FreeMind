@@ -1,4 +1,4 @@
-import itemStyles from './sidebar.module.css'
+import styles from './sidebar.module.css'
 function Items({ destination = '#', children }){
     return (<>
         <li className={styles.sidebarList}>

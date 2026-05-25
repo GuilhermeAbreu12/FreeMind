@@ -5,6 +5,7 @@ import HomeScreen from './features/home/pages/home-screen/home-screen'
 import PrivateRoute from './routes/PrivateRoute'
 
 import './styles/App.css'
+import NewProjectScreen from './features/projects/pages/new-project-screen'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
             <HomeScreen />
           </PrivateRoute>
         } />
+        <Route path='/createProject' element={<NewProjectScreen/>}/>
       </Routes>
     </>
   )

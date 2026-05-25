@@ -3,13 +3,13 @@
     width: 80vw;
     max-width: 80vw;
     padding: 16px;
+    margin: 0 auto;
 
     color: white;
-    border-radius: 8px;
-
-    display: flex;
-    justify-self: center;
+    
     gap: 8px;
+    display: flex;
+    border-radius: 8px;
 
     box-shadow: 0 0 4px white;
     backdrop-filter: blur(10px);

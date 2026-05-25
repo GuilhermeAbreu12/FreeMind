@@ -1,3 +1,15 @@
+.authInput {
+    width: 100%;
+    padding: 4px;
+    border: 2px solid transparent;
+    border-radius: 4px;
+}
+.authInput:hover, .authInput:focus {
+    transition: .7s;
+    border-color: darkblue;
+    outline: none;
+}
+
 .passwordContainer__area {
     border-radius: 4px;
     display: flex;

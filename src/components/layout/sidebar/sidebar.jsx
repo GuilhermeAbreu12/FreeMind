@@ -1,7 +1,5 @@
 import Logo from '../logo/logo'
 import Nav from './nav'
-import Button from '../../ui/button/button'
-{/*import CloseMenu from './CloseMenu' Não sei o que é isso. */}
 
 import menuImg from '../../../assets/images/logos/sun.png'
 import { useEffect, useState } from 'react';

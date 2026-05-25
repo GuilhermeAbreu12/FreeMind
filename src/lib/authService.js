@@ -44,3 +44,22 @@ export const getUser = async () => {
     return data.user
 }
 
+// Profiles
+export const createProfile = async (userId, username) => {
+    const { data, error } = await supabase
+        .from('profiles')
+        .insert([
+            {
+                id: userId,
+                username: username,
+                created_at: new Date(),
+            }
+    ]);
+
+    if (error) {
+        console.error('Erro ao criar perfil: ', error.message)
+    } else {
+        console.log('Perfil criado: ', data)
+    }
+}
+

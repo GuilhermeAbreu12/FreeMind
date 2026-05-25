@@ -63,3 +63,10 @@ export const createProfile = async (userId, username) => {
     }
 }
 
+export const getProfile = async (userId) => {
+    const { data } = await supabase
+        .from('profiles')
+        .select()
+        .eq('id', userId)
+    return data
+}

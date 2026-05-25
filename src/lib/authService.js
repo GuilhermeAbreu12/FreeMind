@@ -9,3 +9,27 @@ export const signUp = async (email, password) => {
     return { data, error }
 }
 
+// Login
+export const signIn = async (email, password) => {
+    let data, error = null;
+    
+    try {
+        const result = await supabase.auth.signInWithPassword({
+            email,
+            password
+        });
+        data = result.data
+        error = result.error // Erro conhecido só pelo Supabase? Tome.
+        if (error){
+            if (error.message === "Invalid login credentials"){
+                console.log('Erro: E-mail ou senha inválidos')
+            }
+            else console.log('Erro do supabase: ', error.message)
+        }
+    } catch (err) {
+        error = err; // Erro conhecido pelo try catch, além do supabase? Tome.
+        normalizeAuthError(err)
+    }
+    return { data, error }
+}
+

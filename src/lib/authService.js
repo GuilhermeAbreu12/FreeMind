@@ -1,3 +1,16 @@
+import { supabase } from "./supabase"
+
+// Tratar erros
+const normalizeAuthError = (error) => {
+    if (
+        error.message?.includes("Failed to fetch") ||
+        error.message?.includes("NetworkError") ||
+        error.message?.includes("ERR_INTERNET_DISCONNECTED")
+    ){
+        console.log('Erro de conexão/fetch')
+    } else console.log('Erro inesperado: ', error.message)
+}
+
 // Registrar usuário
 export const signUp = async (email, password) => {
     const { data, error } = await supabase.auth.signUp({

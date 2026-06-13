@@ -9,7 +9,7 @@
     display: block;
 }
 .menu {
-    min-height: 100vh;
+    min-height: 100dvh;
     width: 170px;
     display: none;
     background-color: black;

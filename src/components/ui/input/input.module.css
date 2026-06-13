@@ -9,7 +9,6 @@
     border-color: darkblue;
     outline: none;
 }
-
 .passwordContainer__area {
     border-radius: 4px;
     display: flex;
@@ -25,4 +24,17 @@
     align-items: center;
     font-size: 1.3rem;
     background-color: transparent;
+}
+
+#projectNameContainer {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.inputProjectName {
+    padding: 4px 8px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 4px;
 }

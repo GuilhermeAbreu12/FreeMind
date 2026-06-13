@@ -4,6 +4,7 @@ import styles from './sidebar.module.css'
 function Nav(){
     /* Lista de itens que precisam estar na nav */
     const items = [
+        {nome: 'Início', link: '/home'},
         {nome: 'Clientes', link: '#'},
         {nome: 'Finanças', link: '#'}, 
         {nome: 'Projetos', link: '#'}, 

@@ -18,7 +18,11 @@ function App() {
             <HomeScreen />
           </PrivateRoute>
         } />
-        <Route path='/createProject' element={<NewProjectScreen/>}/>
+        <Route path='/createProject' element={
+          <PrivateRoute>
+            <NewProjectScreen />
+          </PrivateRoute>
+        } />
       </Routes>
     </>
   )

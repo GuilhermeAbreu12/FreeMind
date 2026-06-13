@@ -7,7 +7,7 @@ function PasswordInput({ title, className = '', id='', label='', autoComplete='t
     const toggleShowPassword = () => setShowPassword(!showPassword)
     
     return (<>
-        <div id="password-container">
+        <div id="passwordContainer">
             <label htmlFor={id}>{label ? label : 'Senha'}</label>
             <div className={styles.passwordContainer__area}>
                 <input name='password' id={id} className={styles[className]} onChange={onChange} value={value} autoComplete={autoComplete} type={showPassword ? 'text' : 'password'} title={title ? title : "Digite uma senha de acesso"} required/>

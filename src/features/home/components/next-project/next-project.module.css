@@ -1,4 +1,6 @@
 .nextProject {
+    display: flex;
+    flex-direction: column;
     background-color: rgb(240, 239, 236);
     width: max(30%, 400px);
     max-width: 100%;

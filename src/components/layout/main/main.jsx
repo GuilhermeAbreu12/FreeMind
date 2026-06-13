@@ -1,8 +1,8 @@
 import mainStyles from './main.module.css'
 
-function Main( {children} ){
+function Main( {className = '', children} ){
     return (<>
-        <main className={mainStyles.main}>
+        <main className={`${mainStyles.main} ${mainStyles[className]}`}>
             {children}
         </main>
     </>);

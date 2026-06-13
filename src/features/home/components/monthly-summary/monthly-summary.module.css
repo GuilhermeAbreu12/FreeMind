@@ -1,8 +1,9 @@
 #aside {
-    display: flex;
-    justify-content: end;
-    align-self: flex-start;
-    margin-top: 10%;
+    display: grid;
+    grid-column: 2;
+    grid-row: 1;
+    justify-content: center;
+    align-self: center;
 }
 #table {
     font-size: .8rem;
@@ -31,4 +32,10 @@
 }
 #inProgress {
     color: darkorange;
+}
+@media (min-width: 640px){
+    #aside {
+        display: grid;
+        grid-column: 3;
+    }
 }

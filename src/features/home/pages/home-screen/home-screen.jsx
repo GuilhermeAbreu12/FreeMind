@@ -20,8 +20,7 @@ function HomeScreen(){
   return (<>
     <Header />
     <Sidebar />
-    <Main>
-      <div></div>{/* espaço vazio */}
+    <Main className='mainSideBetween'>
       <div className={mainStyles.mainContent}>
         <Link to='/createProject' className={buttonStyles.primaryBtn}>Criar novo projeto</Link>
         <h3 className={mainStyles.sectionTitle}>Projeto mais próximo</h3>

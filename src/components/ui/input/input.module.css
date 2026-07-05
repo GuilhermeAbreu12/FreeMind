@@ -26,15 +26,31 @@
     background-color: transparent;
 }
 
-#projectNameContainer {
-    width: max-content;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+.containerNewProject {
+    display: grid;
+    gap: 0.4rem;
 }
-.inputProjectName {
-    padding: 4px 8px;
+
+.containerNewProject label {
+    color: #334155;
+    font-size: 0.88rem;
+    font-weight: 700;
+}
+
+.inputNewProject {
+    width: 100%;
+    min-height: 2.6rem;
+    padding: 0.65rem 0.75rem;
+    color: #172033;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font: inherit;
     outline: none;
-    border: 1px solid black;
-    border-radius: 4px;
+}
+
+.inputNewProject:focus,
+.inputNewProject:hover {
+    border-color: #4060a8;
+    box-shadow: 0 0 0 3px rgba(64, 96, 168, 0.14);
 }

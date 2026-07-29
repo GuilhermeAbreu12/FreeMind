@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import styles from '../styles/projects.module.css'
 import Input from '../../../components/ui/input/input'
+import Field from '../../../components/ui/field/Field'
 
 const initialFormData = {
     projectName: '',
@@ -266,15 +267,6 @@ function NewProjectForm(){
                 <button type='submit'>Criar projeto</button>
             </div>
         </form>
-    )
-}
-
-function Field({ label, name, fullWidth = false, children }){
-    return(
-        <div className={`${styles.formField} ${fullWidth ? styles.fullWidth : ''}`}>
-            <label htmlFor={name}>{label}</label>
-            {children}
-        </div>
     )
 }
 

@@ -1,0 +1,58 @@
+.tableContainer {
+    max-width: 100%;
+    width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+}
+.table {
+    cursor: pointer;
+    min-width: 500px;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    color: black;
+    border: 2px solid darkblue;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.tr {
+    outline: 0;
+}
+.th {
+    background-color: darkblue;
+    color: white;
+    border-color: darkblue;
+}
+.th, .td {
+    padding: 8px 16px;
+    text-align: center;
+}
+.tr:not(:last-child) > * {
+    border-bottom: 1px solid gainsboro;
+}
+.tbody .tr:hover{
+    transform: scale(101%);
+} 
+.tbody .tr:hover, 
+.tbody .tr:focus{
+    background-color: gainsboro;
+    transition: .7s;
+}
+.tr .td:last-child {
+    padding: 0;
+    margin: 0;
+    height: 20px;
+}
+.tr .td:last-child:hover, .td:last-child:focus {
+    transition: .7s;
+    cursor: pointer;
+    background-color: darkblue;
+    & .btnEditIcon {
+        color: white;
+    }
+}
+.btnEditIcon {
+    color: blue;
+    height: 20px;
+    width: auto;
+}

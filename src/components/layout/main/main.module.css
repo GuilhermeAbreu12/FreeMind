@@ -16,11 +16,6 @@
     justify-content: center;
     flex: 1;
 }
-.sectionTitle {
-    margin: 2rem 0 .5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-}
 @media (min-width: 640px){
     .mainContent {
         display: flex;

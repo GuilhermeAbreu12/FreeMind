@@ -44,3 +44,8 @@ body.auth {
 Link, a {
   text-decoration: none;
 }
+.sectionTitle {
+    margin: 2rem 0 .5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}

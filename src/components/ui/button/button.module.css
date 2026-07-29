@@ -30,3 +30,25 @@
     transition: .7s;
     border-color: white;
 }
+
+.btnEdit {
+    outline: 0;
+}
+.btnEdit:focus {
+    transition: .7s;
+    cursor: pointer;
+    background-color: darkblue;
+    & * {
+        color: white;
+    }
+}
+.btnEdit {
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 7px;
+    border: none;
+}

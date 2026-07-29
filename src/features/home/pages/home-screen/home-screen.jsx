@@ -12,7 +12,6 @@ import MonthlySummary from '../../components/monthly-summary/monthly-summary'
 import '../../../../styles/App.css'
 import mainStyles from '../../../../components/layout/main/main.module.css'
 import buttonStyles from '../../../../components/ui/button/button.module.css'
-import homeStyles from './home-screen.module.css'
 import { Link } from 'react-router-dom'
 
 function HomeScreen(){
@@ -23,7 +22,7 @@ function HomeScreen(){
     <Main className='mainSideBetween'>
       <div className={mainStyles.mainContent}>
         <Link to='/createProject' className={buttonStyles.primaryBtn}>Criar novo projeto</Link>
-        <h3 className={mainStyles.sectionTitle}>Projeto mais próximo</h3>
+        <h3 className='sectionTitle'>Projeto mais próximo</h3>
         <NextProject />
       </div>
       <MonthlySummary />

@@ -5,7 +5,7 @@ function Nav(){
     /* Lista de itens que precisam estar na nav */
     const items = [
         {nome: 'Início', link: '/home'},
-        {nome: 'Clientes', link: '#'},
+        {nome: 'Clientes', link: '/clients'},
         {nome: 'Finanças', link: '#'}, 
         {nome: 'Projetos', link: '#'}, 
         {nome: 'Cronograma', link: '#'}, 

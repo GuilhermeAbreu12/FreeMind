@@ -5,7 +5,7 @@
     padding: 0 10px 0 20px;
 }
 .mainSideBetween{
-    grid-template-columns: 1fr auto 1fr;
+    grid-template-columns: 1fr minmax(0,auto) 1fr;
 }
 .mainContent {
     display: flex;
@@ -27,6 +27,6 @@
         grid-column: 2;
     }
     .mainSideBetween{
-        grid-template-columns: 1fr auto 1fr;
+        grid-template-columns: 1fr minmax(0,auto) 1fr;
     }
 }

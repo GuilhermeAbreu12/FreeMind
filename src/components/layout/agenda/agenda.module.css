@@ -1,0 +1,15 @@
+.agendaContainer {
+    min-height: max-content;
+    width: 100%;
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-items: center;
+    align-items: center;
+}
+div.agenda {
+    height: 60vh;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}

@@ -1,0 +1,60 @@
+.modalOverlay {
+    height: 100%;
+    max-height: 90.4dvh; /* tela reduzida */
+    width: min(250px, 25vw);
+    padding: 1rem;
+    z-index: 5;
+    color: white;
+    box-shadow: 0 1px 10px 0px blue;
+    background-color: darkblue;
+}
+.modal {
+    display: contents;
+}
+.eventsContainer {
+    overflow-y: auto;
+    height: 40%;
+}
+.eventCard {
+    padding: 8px;
+    margin: 8px 0;
+    color: white;
+    background-color: rgb(0, 0, 180);
+    border: 1px solid transparent;
+}
+.eventTitle {
+    margin: 3rem 0 0;
+    text-align: center;
+    font-size: 6rem;
+}
+.ul {
+    margin-bottom: 10px;
+}
+.eventDayOfTheWeek{
+    margin: 0 0 3rem;
+    position: relative;
+    bottom: .9rem;
+    font-weight: 500;
+    font-size: .9rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.eventInfoPeriod {
+    padding: .4rem 0;
+    gap: 4px;
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+}
+.eventStart, .eventEnd {
+    list-style-type: square;
+}
+.eventDescription{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+span.legendEventPeriod {
+    color: aliceblue;
+    font-weight: 700;
+}

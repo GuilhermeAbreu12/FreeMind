@@ -35,6 +35,7 @@ function ModalEditClient({ client, onClose }){
                         onChange={(e) => {setResponsibleName(e.target.value)}} />
                     <div className={styles.containerBtn}>
                         <Button className={'secondaryBtn'} onClick={onClose}>Fechar</Button>
+                        <Button className={'primaryBtn'}>Salvar</Button>
                     </div>
                 </form>
             </div>

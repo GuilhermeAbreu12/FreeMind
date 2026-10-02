@@ -1,4 +1,4 @@
-import styles from '../styles/modal-edit-client.module.css'
+import styles from '../../../components/layout/modal/modal.module.css'
 import Button from '../../../components/ui/button/button'
 import Input from '../../../components/ui/input/input'
 import { useState } from 'react'
@@ -10,7 +10,7 @@ function ModalEditClient({ client, onClose }){
     const [responsibleName, setResponsibleName ] = useState(client.ResponsibleName)
     return (<>
         <div className={styles.modalOverlay}>
-            <div className={styles.modal}>
+            <div className={`${styles.modal} ${styles.modalEdit}`}>
                 <h3>Editar cliente</h3>
                 <form className={`${formStyles.defaultForm} ${formStyles.bottomMargin}`}>
                     <Input 

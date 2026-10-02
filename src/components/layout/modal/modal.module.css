@@ -21,6 +21,10 @@
     border-radius: 8px;
     background-color: white;
 }
+.modalEdit {
+    padding:1rem;
+    width: fit-content;
+}
 .modal h3 {
     padding: 0 0 1rem;
     font-weight: 500;

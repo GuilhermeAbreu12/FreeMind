@@ -1,12 +1,14 @@
 .main {
-    min-height: 80vh;
+    flex: 1;
+    height: 100%;
     width: 100%;
     display: grid;
-    padding: 0 10px 0 20px;
+    /*padding: 0 10px 0 20px;*/
 }
 .mainSideBetween{
     grid-template-columns: 1fr minmax(0,auto) 1fr;
 }
+
 .mainContent {
     display: flex;
     grid-column: 2;
@@ -15,6 +17,9 @@
     align-items: center;
     justify-content: center;
     flex: 1;
+}
+.mainContentOneElement{
+    grid-row: 1;
 }
 @media (min-width: 640px){
     .mainContent {

@@ -20,7 +20,8 @@ function ClientsScreen(){
         <Header />
         <SideBar />
         <Main className='mainSideBetween'>
-            <div className={mainStyles.mainContent}>
+            <div className={mainStyles.nulo}></div>
+            <div className={`${mainStyles.mainContent} ${mainStyles.mainContentOneElement}`}>
                 <h2 className='sectionTitle'>Seus clientes</h2>
                 <div className={tableStyles.tableContainer}>
                     <table className={tableStyles.table}>

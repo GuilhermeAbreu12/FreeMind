@@ -16,6 +16,8 @@ import { CLIENTS } from '../../../mocks/projects';
 
 function ClientsScreen(){
     const [ modalStatus, setModalStatus ] = useState(false)
+    const [ selectedClient, setSelectedClient ] = useState()
+
     return(<>
         <Header />
         <SideBar />
@@ -58,7 +60,7 @@ function ClientsScreen(){
                             ))}
                         </tbody>
                     </table>
-                    {modalStatus && <ModalEditClient onClose={(e) => setModalStatus(false)} />}
+                    {modalStatus && <ModalEditClient client={selectedClient} onClose={() => setModalStatus(false)} />}
                 </div>
             </div>
 

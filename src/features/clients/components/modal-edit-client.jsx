@@ -2,7 +2,7 @@ import styles from '../styles/modal-edit-client.module.css'
 import Button from '../../../components/ui/button/button'
 import Input from '../../../components/ui/input/input'
 
-function ModalEditClient({ onClose }){
+function ModalEditClient({ client, onClose }){
     return (<>
         <div className={styles.modalOverlay}>
             <div className={styles.modal}>

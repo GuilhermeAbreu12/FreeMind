@@ -16,11 +16,11 @@ const rawData = [
 
 export const PROJECTS = [
     {
-        Nome: 'Site E-commerce',
-        Cliente: 'YAHE Doces',
-        Tipo: 'E-commerce',
-        Status: 'Em desenvolvimento',
-        Prazo_final: '17/05/2026',
-        Descrição: 'E-commerce com painel de administrador e login de usuários para cupons',
+        Name: rawData[0].ProjectName,
+        Client: rawData[0].ClientName,
+        Type: rawData[0].ProjectType,
+        Status: rawData[0].ProjectStatus,
+        Deadline: rawData[0].ProjectDeadline,
+        Description: rawData[0].ProjectDescription,
     }
 ]

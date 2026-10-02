@@ -24,3 +24,14 @@ export const PROJECTS = [
         Description: rawData[0].ProjectDescription,
     }
 ]
+
+export const CLIENTS = [
+    {
+        Name: rawData[0].ClientName,
+        Type: rawData[0].ClientType,
+        Email: rawData[0].ClientEmail,
+        PhoneNumber: rawData[0].ClientPhoneNumber,
+        ResponsibleName: rawData[0].ResponsibleName,
+        NumberProjects: rawData[0].NumberProjects
+    }
+]

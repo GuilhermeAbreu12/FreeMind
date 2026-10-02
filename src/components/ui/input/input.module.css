@@ -54,3 +54,12 @@
     border-color: #4060a8;
     box-shadow: 0 0 0 3px rgba(64, 96, 168, 0.14);
 }
+
+.simpleInput {
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+    padding: 4px;
+    width: 100%;
+    color: gray;
+    transition: .7s;
+}

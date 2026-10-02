@@ -1,0 +1,8 @@
+.defaultForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.bottomMargin {
+    margin-bottom: 1rem;
+}

@@ -1,6 +1,7 @@
 import styles from '../../../components/layout/modal/modal.module.css'
 import Button from '../../../components/ui/button/button'
 import Input from '../../../components/ui/input/input'
+import formStyles from '../../../components/layout/form/form.module.css'
 import { useState } from 'react'
 
 function ModalEditClient({ client, onClose }){

@@ -9,7 +9,6 @@
 :root {
   --primary-color: blue;
   --btn-primary: #3085e6;
-  --btn-secondary: rgba(197, 201, 204, 0.425);
   --bg-color: rgb(197, 197, 197);
   --form-bg-color: white;
 
@@ -23,10 +22,10 @@
 }
 body {
   width: 100%;
-  min-height: 100dvh;
   display: flex;
   flex-direction: column;
-
+}
+body {
   background-image: none;
   background-color: #F6FAFF;
 }
@@ -46,7 +45,7 @@ Link, a {
   text-decoration: none;
 }
 .sectionTitle {
-  margin: 2rem 0 .5rem;
-  font-weight: 700;
-  text-transform: uppercase;
+    margin: 2rem 0 .5rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }

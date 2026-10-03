@@ -15,8 +15,8 @@
 .formField select,
 .formField textarea {
     width: 100%;
-    min-height: 2.6rem;
-    padding: 0.65rem 0.75rem;
+    min-height: 2rem;
+    padding: 0.2rem 0.75rem;
     color: #172033;
     background: #ffffff;
     border: 1px solid #cbd5e1;

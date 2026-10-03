@@ -1,0 +1,51 @@
+/* Estilos aplicados às classes originais do react-big-calendar que não consigo acessar por css modules */
+div.rbc-event{
+    height: 8px;
+    width: 8px;
+    padding: 0;
+    margin: 2px 8px;
+    border-radius: 50%;
+    background-color: darkblue;
+    display: none;
+}
+div.rbc-event-content {
+    display: none !important;
+}
+.rbc-row-segment {
+    display: flex;
+    justify-content: end;
+}
+.rbc-date-cell.rbc-now{
+    color: white;
+}
+.rbc-day-bg.rbc-today.cell {
+    color: white;
+    background-color: darkblue;
+}
+div.dot {
+    height: 4px;
+    width: 15px;
+    margin: 18px 5px;
+    border-radius: 16px;
+    display: flex;
+    justify-self: right;
+    background-color: darkblue;
+}
+.cell {
+    position: relative;
+    cursor: pointer;
+}
+div.rbc-toolbar .rbc-btn-group:last-child button{
+    background-color: var(--primary-color);
+    border-color: var(--btn-primary);
+    color: white;
+    outline: none;
+}
+div.rbc-toolbar .rbc-btn-group:last-child button:hover,
+div.rbc-toolbar .rbc-btn-group:last-child button:focus{
+    filter: drop-shadow(0 0 10px darkblue);
+    transition: .7s;
+}
+div.rbc-toolbar .rbc-btn-group:last-child button.rbc-active{
+    background-color: darkblue;
+}

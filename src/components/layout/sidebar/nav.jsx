@@ -8,7 +8,7 @@ function Nav(){
         {nome: 'Clientes', link: '/clients'},
         {nome: 'Finanças', link: '#'}, 
         {nome: 'Projetos', link: '/projects'}, 
-        {nome: 'Cronograma', link: '#'}, 
+        {nome: 'Cronograma', link: '/timeline'}, 
         {nome: 'Config. de projetos', link: '#'}, 
         {nome: 'Config. do Free', link: '#'}
     ]

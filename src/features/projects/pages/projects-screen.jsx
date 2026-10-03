@@ -18,7 +18,7 @@ function ProjectsScreen(){
         <Header />
         <Sidebar />
         <Main className="mainSideBetween">
-            <div className={mainStyles.mainContent}>
+            <div className={`${mainStyles.mainContent} ${mainStyles.mainContentOneElement}`}>
                 <Link to='/createProject' className={buttonStyles.primaryBtn}>Criar novo projeto</Link>
                 <h2 className="sectionTitle">Seus projetos</h2>
                 <div className={tableStyles.tableContainer}>

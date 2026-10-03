@@ -12,13 +12,18 @@ import '../../../styles/App.css'
 import mainStyles from '../../../components/layout/main/main.module.css'
 import tableStyles from '../../../components/layout/table/table.module.css'
 
+import { CLIENTS } from '../../../mocks/projects';
+
 function ClientsScreen(){
     const [ modalStatus, setModalStatus ] = useState(false)
+    const [ selectedClient, setSelectedClient ] = useState()
+
     return(<>
         <Header />
         <SideBar />
         <Main className='mainSideBetween'>
-            <div className={mainStyles.mainContent}>
+            <div className={mainStyles.nulo}></div>
+            <div className={`${mainStyles.mainContent} ${mainStyles.mainContentOneElement}`}>
                 <h2 className='sectionTitle'>Seus clientes</h2>
                 <div className={tableStyles.tableContainer}>
                     <table className={tableStyles.table}>
@@ -34,35 +39,28 @@ function ClientsScreen(){
                             </tr>
                         </thead>
                         <tbody className={tableStyles.tbody}>
-                            <tr className={tableStyles.tr} tabIndex={0}>
-                                <td className={tableStyles.td}>PetZ</td>
-                                <td className={tableStyles.td}>Jurídica</td>
-                                <td className={tableStyles.td}>contato@petz.com.br</td>
-                                <td className={tableStyles.td}>(14) 99999-9999</td>
-                                <td className={tableStyles.td}>Geraldo Alberto</td>
-                                <td className={tableStyles.td}>1</td>
-                                <td className={tableStyles.td}>
-                                    <Button className={'btnEdit'} onClick={(e) => setModalStatus(true)}>
-                                        <FiEdit3 className={tableStyles.btnEditIcon}/>
-                                    </Button>
-                                </td>
-                            </tr>
-                            <tr className={tableStyles.tr} tabIndex={0}>
-                                <td className={tableStyles.td}>Thiago Silva.ltda</td>
-                                <td className={tableStyles.td}>Jurídica</td>
-                                <td className={tableStyles.td}>contato@thiago.com.br</td>
-                                <td className={tableStyles.td}>(230) 9888-8888</td>
-                                <td className={tableStyles.td}>Thiago Silva</td>
-                                <td className={tableStyles.td}>2</td>
-                                <td className={tableStyles.td}>
-                                    <Button className={'btnEdit'} onClick={(e) => setModalStatus(true)}>
-                                        <FiEdit3 className={tableStyles.btnEditIcon}/>
-                                    </Button>
-                                </td>
-                            </tr>
+                            {CLIENTS.map((client) => (
+                                <tr className={tableStyles.tr} tabIndex={0}>
+                                    <td className={tableStyles.td}>{client.Name}</td>
+                                    <td className={tableStyles.td}>{client.Type}</td>
+                                    <td className={tableStyles.td}>{client.Email}</td>
+                                    <td className={tableStyles.td}>{client.PhoneNumber}</td>
+                                    <td className={tableStyles.td}>{client.ResponsibleName}</td>
+                                    <td className={tableStyles.td}>{client.NumberProjects}</td>
+                                    <td className={tableStyles.td}>
+                                        <Button className={'btnEdit'} 
+                                            onClick={() => {
+                                                setModalStatus(true),
+                                                setSelectedClient(client)
+                                            }}>
+                                            <FiEdit3 className={tableStyles.btnEditIcon}/>
+                                        </Button>
+                                    </td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
-                    {modalStatus && <ModalEditClient onClose={(e) => setModalStatus(false)} />}
+                    {modalStatus && <ModalEditClient client={selectedClient} onClose={() => setModalStatus(false)} />}
                 </div>
             </div>
 

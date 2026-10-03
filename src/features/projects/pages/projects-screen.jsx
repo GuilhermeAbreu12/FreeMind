@@ -2,7 +2,8 @@ import Header from "../../../components/layout/header/header";
 import Sidebar from "../../../components/layout/sidebar/sidebar";
 import Main from "../../../components/layout/main/main";
 import Field from "../../../components/ui/field/Field";
-
+import Button from "../../../components/ui/button/button";
+import ModalEditProject from '../components/modal-edit-project';
 import { PROJECTS } from "../../../mocks/projects";
 
 import { Link } from 'react-router-dom'
@@ -14,6 +15,8 @@ import buttonStyles from '../../../components/ui/button/button.module.css'
 import tableStyles from '../../../components/layout/table/table.module.css'
 
 function ProjectsScreen(){
+    const [ modalStatus, setModalStatus ] = useState(false)
+    const [ selectedProject, setSelectedProject ] = useState()
     return(<>
         <Header />
         <Sidebar />
@@ -60,6 +63,7 @@ function ProjectsScreen(){
                             ))}
                         </tbody>
                     </table>
+                    {modalStatus && <ModalEditProject project={selectedProject} onClose={() => setModalStatus(false)} />}
                 </div>
             </div>       
         </Main>

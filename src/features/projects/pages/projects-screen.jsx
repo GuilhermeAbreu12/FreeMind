@@ -7,15 +7,13 @@ import { PROJECTS } from "../../../mocks/projects";
 
 import { Link } from 'react-router-dom'
 import { FiEdit3 } from "react-icons/fi";
-
+import { useState } from "react";
 import '../../../styles/App.css'
 import mainStyles from '../../../components/layout/main/main.module.css'
 import buttonStyles from '../../../components/ui/button/button.module.css'
 import tableStyles from '../../../components/layout/table/table.module.css'
 
 function ProjectsScreen(){
-    const Project01 = PROJECTS[0]
-    
     return(<>
         <Header />
         <Sidebar />
@@ -37,23 +35,29 @@ function ProjectsScreen(){
                             </tr>
                         </thead>
                         <tbody className={tableStyles.tbody}>
-                            <tr className={tableStyles.tr} tabIndex={0}>
-                                <td className={tableStyles.td}>{Project01.Nome}</td>
-                                <td className={tableStyles.td}>{Project01.Cliente}</td>
-                                <td className={tableStyles.td}>{Project01.Tipo}</td>
-                                <td className={tableStyles.td}>{Project01.Status}</td>
-                                <td className={tableStyles.td}>{Project01.Prazo_final}</td>
-                                <td className={tableStyles.td}>
-                                    <Field name='projectDescription'>
-                                        <textarea name="projectDescription" rows='1' value={Project01.Descrição} disabled  />
-                                    </Field>
-                                </td>
-                                <td className={tableStyles.td}>
-                                    <a href='#' className={tableStyles.btnEdit}>
-                                        <FiEdit3 className={tableStyles.btnEditIcon}/>
-                                    </a>
-                                </td>
-                            </tr>
+                            {PROJECTS.map((project) => (
+                                <tr className={tableStyles.tr} tabIndex={0}>
+                                    <td className={tableStyles.td}>{project.Name}</td>
+                                    <td className={tableStyles.td}>{project.Client}</td>
+                                    <td className={tableStyles.td}>{project.Type}</td>
+                                    <td className={tableStyles.td}>{project.Status}</td>
+                                    <td className={tableStyles.td}>{project.Deadline}</td>
+                                    <td className={tableStyles.td}>
+                                        <Field name='projectDescription'>
+                                            <textarea name="projectDescription" rows='1' value={project.Description} disabled  />
+                                        </Field>
+                                    </td>
+                                    <td className={tableStyles.td}>
+                                        <Button className={'btnEdit'} 
+                                            onClick={() => {
+                                                setModalStatus(true), 
+                                                setSelectedProject(project)
+                                            }}>
+                                            <FiEdit3 className={tableStyles.btnEditIcon}/>
+                                        </Button>
+                                    </td>
+                                </tr>
+                            ))}
                         </tbody>
                     </table>
                 </div>

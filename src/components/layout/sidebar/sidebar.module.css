@@ -4,6 +4,7 @@
     padding-right: 1rem;
     display: flex;
     position: absolute;
+    z-index: 1;
 }
 .menu.active {
     display: block;
